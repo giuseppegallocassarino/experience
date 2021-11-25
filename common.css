@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {height: 100%;}
+
+body{
+ background: #eee;   
+}
+
+.animate {
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.button {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 15px 30px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+/*---- HEADER -----*/
+.header {
+    background: #333;
+}
+
+.header__logo {color: #fff; float: left; display: block; padding: 20px;}
+
+.header__menu { float: right; margin: 0; padding: 0;}
+.header__menu__item {display: inline-block;}
+
+.header__menu__item a {color: #fff; display: block; padding: 20px;}
+
+.header__menu__item a:hover {background: #000;}
+
+.header__icon-bar{display: block; float: right; padding: 20px; display: none;}
+
+.header__icon-bar span {display: block; height: 3px; width: 30px;
+background: #fff; margin-bottom: 5px;}
+
+
+/*---- Cover -----*/
+
+.cover {height: 70%; 
+background-image: url("https://images.unsplash.com/photo-1573415620265-204f1ca6f1c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"); 
+background-size:cover ;
+-moz-background-size: cover ;
+-o-background-size: cover ;
+background-position: center center;
+position: relative;
+}
+
+.cover__caption__filter{
+    background: black ;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    z-index: 0;
+    opacity: 0.5;
+
+}
+
+.cover__caption {
+    display: table;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 0px 20px;
+
+}
+
+.cover__caption__copy {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+/*---- Tablet */
+
+@media (max-width: 998px) {
+
+}
+
+
+
+
+/*----- Smatphone -----*/
+@media (max-width: 767px ){
+    .header__icon-bar{display: block;}
+    .header__menu__item {display: block;}
+    .header__menu {width: 100%; height: 0px; overflow: hidden;}
+    .header {position: fixed; width: 100%; z-index: 100;}
+    .is-open {height: 300px; overflow: auto;}
+    .cover {height: 100%;}
+
+
+}
+
+
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  * html .clearfix             { zoom: 1; } /* IE6 */
+  *:first-child+html .clearfix { zoom: 1; } /* IE7 */
+   
+
+
+  /*---- Code per non far sommare il padding alla larghezza impostata -----*/
+
+  *,
+  *::before,
+  *::after {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  }

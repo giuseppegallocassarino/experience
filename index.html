@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="normalizesheet" href="/normalize.css">
+    <link rel="stylesheet" href="common.css">
+
+    
+    <title>My blog</title>
+</head>
+<body>
+    <header class="header clearfix">
+        <a href="" class="header__logo">Logo</a>
+        <a href="" class="header__icon-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+        
+        </a>
+        <ul class="header__menu animate">
+            <li class="header__menu__item"><a href="">Chi sono</a></li>
+            <li class="header__menu__item"><a href="">I miei progetti</a></li>
+            <li class="header__menu__item"><a href="">I miei viaggi</a></li>
+            <li class="header__menu__item"><a href="">Social</a></li>
+            <li class="header__menu__item"><a href="">Contatti</a></li>
+            
+        </ul>
+    </header>
+     <section class="cover">
+         <div class="cover__caption__filter"></div>
+     <div class="cover__caption">
+         <div class="cover__caption__copy">
+             <h1>“Viaggiare rende modesti. Ci mostra quanto è piccolo il posto che occupiamo nel mondo” Gustave Flaubert </h1>
+             <br>
+             <h2>“Ovunque tu vada, vacci con tutto il tuo cuore” Confucio</h2>
+             <br>
+             
+             <a href="" class="button">Call to action</a>
+
+
+         </div>
+     </div>
+
+
+     </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+    <script>$(document).ready(function(){
+
+        $(".header__icon-bar").click(function(e){
+
+          $(".header__menu").toggleClass('is-open');
+          e.preventDefault();
+        });
+
+    });
+    </script>
+</body>
+</html>
